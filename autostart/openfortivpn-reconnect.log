@@ -1,0 +1,16 @@
+=== VPN watchdog started ===
+Thu Apr 24 19:52:50 CEST 2025: Starting VPN...
+INFO:   Connected to gateway.
+INFO:   Authenticated.
+INFO:   Remote gateway has allocated a VPN.
+Using interface ppp0
+Connect: ppp0 <--> /dev/pts/1
+INFO:   Got addresses: [192.168.22.2], ns [0.0.0.0, 0.0.0.0]
+INFO:   negotiation complete
+INFO:   negotiation complete
+local  IP address 192.168.22.2
+remote IP address 192.0.2.1
+INFO:   Interface ppp0 is UP.
+INFO:   Setting new routes...
+INFO:   Adding VPN nameservers...
+INFO:   Tunnel is up and running.
