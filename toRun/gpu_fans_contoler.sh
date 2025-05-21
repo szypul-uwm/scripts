@@ -142,9 +142,10 @@ while true; do
 		# Maksymalna temperatura (shutdown)
 		MAX_TEMP=$(nvidia-smi -q -i "$i" | awk -F': ' '/GPU Shutdown Temp/ {print $2}' | awk '{print $1}')
 		if [[ -z "$MAX_TEMP" ]]; then
-			echo "GPU $i: TEMP='$TEMP'"
-			echo "Nie uda³o siê odczytaæ temperatury krytycznej GPU $i – pomijam."
-			continue
+			MAX_TEMP="---"
+			#echo "GPU $i: TEMP='$TEMP'"
+			#echo "Nie uda³o siê odczytaæ temperatury krytycznej GPU $i – pomijam."
+			#continue
 		fi
 		
 		#TEMP=100 
