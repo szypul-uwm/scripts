@@ -31,7 +31,7 @@ if [[ -f "$CONFIG_URL_FILE" ]]; then
       SCRIPT_PATH="$SCRIPT_DIR/$script_name"
 
       if [[ -f "$SCRIPT_PATH" ]]; then
-        chmod +x "$SCRIPT_PATH"
+        #chmod +x "$SCRIPT_PATH"
         echo "Starting $script_name..."
         sudo -u wamasoft DISPLAY=:1 xfce4-terminal --hold --command="$SCRIPT_PATH"
         # lub do logu:
