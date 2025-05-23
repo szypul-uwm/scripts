@@ -34,12 +34,13 @@ if [[ -f "$CONFIG_URL_FILE" ]]; then
       if [[ -f "$SCRIPT_PATH" ]]; then
         #chmod +x "$SCRIPT_PATH"
         echo "Starting $script_name..."
-        # sudo -u wamasoft DISPLAY=:1 xfce4-terminal --hold --command="$SCRIPT_PATH"
-		sudo -Hu "$OUT_USER" \
-                     DISPLAY="$DISPLAY_NUM" \
-                     XDG_RUNTIME_DIR="$XDG_DIR" \
-                     DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_DIR/bus" \
-                     bash -c "\"$SCRIPT_PATH\" >> \"$LOG_DIR/${script_name}.log\" 2>&1 &"
+#        sudo -u wamasoft DISPLAY=:1 xfce4-terminal --hold --command="$SCRIPT_PATH"
+        sudo -u wamasoft DISPLAY=:1 xfce4-terminal --disable-server --hold --command="$SCRIPT_PATH" &
+	#	sudo -Hu "$OUT_USER" \
+        #             DISPLAY="$DISPLAY_NUM" \
+        #             XDG_RUNTIME_DIR="$XDG_DIR" \
+        #             DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_DIR/bus" \
+	#             bash -c "\"$SCRIPT_PATH\" >> \"$LOG_DIR/${script_name}.log\" 2>&1 &"
         # lub do logu:
         # sudo "$SCRIPT_PATH" > "$LOG_DIR/${script_name}.log" 2>&1 &
       else
